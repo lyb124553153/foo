@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   post '/links' => 'links#create'
   delete 'links/*code', to: 'links#expire', param: :code
   get 'links/*code', to: 'links#detail', param: :code
-  get '/s/:code', to: 'links#show', param: :code
+  get '/s/:code', to: 'links#show', param: :code, as: :shortener
 end

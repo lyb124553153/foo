@@ -16,7 +16,9 @@ module Foo
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
     if Rails.env.development?
-      config.autoload_paths += [Rails.root.join('lib')]
+      Rails.application.routes.default_url_options[:host] = 'localhost:3000'
+    else
+      Rails.application.routes.default_url_options[:host] = 'protected-citadel-14400.herokuapp.com'
     end
   end
 end

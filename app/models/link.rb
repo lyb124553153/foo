@@ -10,6 +10,6 @@ class Link < ApplicationRecord
   end
 
   def shortened_url
-    "http://localhost:3000/s/#{code}"
+    Rails.application.routes.url_helpers.shortener_url(code: code)
   end
 end

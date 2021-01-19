@@ -1,0 +1,7 @@
+<div class="card-footer">
+<div class="alert alert-success">
+<b>Shortened URL: </b><%= link_to "#{shortened_url}", shortened_url %>
+    <b>Admin URL: </b><% link_to %>
+    <b> used times <%= @link.use_count %></b>
+  </div>
+</div>
